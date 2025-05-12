@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  color: black;
+}
+
+.page-wrapper {
+  width: 100%;
+  height: 50vh; /* 50% of the viewport height */
+  /* box-sizing: border-box;
+  overflow: hidden;  */
+}
+
+.header,
+.sub-header {
+  text-align: center;
+  margin: 2px 0 0 0;
+}
+
+.header {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: black;
+}
+
+.sub-header {
+  font-size: 8px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 6px;
+}
+
+.outer-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 97%;
+  border: 0.75px solid #ccc;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  margin-top: 10px;
+  border: 0.75px solid #ccc;
+  border-radius: 2px;
+  padding: 0;
+  font-size: 6px;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.info-left {
+  width: calc(100% - 70px);
+  box-sizing: border-box;
+}
+
+.info-right {
+  width: 70px;
+  height: 120px; /* Set a fixed height matching the image */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center vertically */
+  border: 0.75px solid #ccc;
+  /* margin-top: 16.5px; */
+  padding: 0; /* Remove padding to eliminate gaps */
+  box-sizing: border-box;
+  overflow: hidden; /* Hide any overflow */
+  border-bottom: none;
+  border-right: none;
+  border-top: none;
+}
+
+.info-table {
+  table-layout: fixed;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.photo {
+  width: 60px;
+  height: 85px;
+  object-fit: cover;
+  padding-top: 12px;
+  display: block; /* Prevent inline-block spacing issue */
+}
+
+.info-table td.special-cell {
+  font-size: 6px;
+  text-align: left;
+  padding: 3px 2px 10px 2px; /* ⬅️ Increased vertical padding */
+  width: 100%;
+  align-content: start;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-left: none;
+}
+
+
+.info-table,
+.score-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+}
+
+.info-table td,
+.score-table td,
+.score-table th {
+  border: 0.75px solid #ccc;
+  padding: 4px;
+  font-size: 6px;
+  text-align: center;
+  border-right: none;
+  border-bottom: none;
+}
+
+.info-table td.label {
+  background-color: #f5f5f5;
+  text-align: right;
+  width: 35%;
+}
+
+.info-table td.values {
+  text-align: left;
+}
+
+.caption {
+  padding: 4px;
+  font-size: 6px;
+  text-align: left;
+  font-weight: normal;
+}
+
+span p {
+  text-align: center;
+  padding: 5px;
+  font-size: 6px;
+  margin: 0;
+  margin-top: 4px;
+  color: black;
+}
+
+th{
+  color: black;
+  font-weight: 600;
+  font-size: 6px;
+  background-color: #f5f5f5;
+}
+
+#table1 td.label,
+#table2 td.label {
+  width: 55%;
+}
+#table1 td.values,
+#table2 td.values {
+  width: 56.5%;
+}
+
+@media (min-width: 390px) {
+  #table1 td.label,
+  #table2 td.label {
+    width: 50%;
+  }
+  #table1 td.values,
+  #table2 td.values {
+    width: 60%;
+  }
+}
